@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lmms-mcp"
+version = "0.1.0"
+description = "LMMS integration with Claude AI through Model Context Protocol (MCP)"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "akidry", email = "akidry@example.com"}
+]
+dependencies = [
+    "python-osc>=1.8.0",
+    "websockets>=10.0",
+    "model-context-protocol>=0.1.0"
+]
+
+[project.scripts]
+lmms-mcp = "lmms_mcp.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "pytest",
+    "pytest-asyncio"
+]
